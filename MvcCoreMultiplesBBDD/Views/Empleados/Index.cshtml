@@ -37,6 +37,8 @@
                 @Html.DisplayNameFor(model => model.IdDepartamento)
             </th>
             <th>DETALLES</th>
+            <th>BORRAR</th>
+            <th>EDITAR</th>
         </tr>
     </thead>
     <tbody>
@@ -72,6 +74,22 @@
                     asp-route-idEmpleado = "@item.IdEmpleado"
                     class="btn btn-info">
                     Detalles
+                </a>
+            </td>
+            <td>
+                <a asp-controller="Empleados"
+                    asp-action="Delete"
+                    asp-route-id = "@item.IdEmpleado"
+                    class="btn btn-danger">
+                    Borrar
+                </a>
+            </td>
+            <td>
+                <a asp-controller="Empleados"
+                    asp-action="EditEmpleado"
+                    asp-route-id = "@item.IdEmpleado"
+                    class="btn btn-dark">
+                    Editar
                 </a>
             </td>
         </tr>
